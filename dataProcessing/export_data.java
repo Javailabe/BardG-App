@@ -1,4 +1,4 @@
-//Poczatkowe menu naszego programu
+//klasa do podgladau list uzytkownikow i gier
 
 package dataProcessing;
 

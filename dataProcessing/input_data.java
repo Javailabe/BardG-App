@@ -1,3 +1,4 @@
+//klasa do dodawania wpisow do list uzytkowniko i gier
 package dataProcessing;
 
 import java.io.BufferedReader;
@@ -7,7 +8,11 @@ import java.io.InputStreamReader;
 
 public class input_data {
 
-    //metoda dodajaca uzytkownika
+
+    //===========================
+    //Dodawanie nowego uzytkownika
+    //===========================
+
     void inputUser() {
         String wpisUser;
         BufferedReader dodajUser = new BufferedReader(new InputStreamReader(System.in));
@@ -16,7 +21,7 @@ public class input_data {
         System.out.println("Imie, Nazwisko, email");
         System.out.println();
 
-        try (FileWriter fw = new FileWriter("D:/Java/BoardG-App/data base/users.txt", true)) {
+        try (FileWriter fw = new FileWriter("D:/Java/BoardG-App/data base/users.txt", true)) {  //tutaj powinien byc domyslny folder przechowywania listy, nie na moim dysku :)
             do {
                 System.out.print("Dodaj uzytkownika lub wybierz (.) by zakonczyc: ");
                 wpisUser = dodajUser.readLine();
@@ -33,7 +38,10 @@ public class input_data {
 
     }
 
-    //metoda dodajaca gre
+    //===========================
+    //Dodawanie nowej gry
+    //===========================
+
     void inputGame()
     {
         String wpisGame;
@@ -43,7 +51,7 @@ public class input_data {
         System.out.println("Nazwa, Wydawca, Rok wydania");
         System.out.println();
 
-        try (FileWriter fw = new FileWriter("D:/Java/BoardG-App/data base/games.txt", true)) {
+        try (FileWriter fw = new FileWriter("D:/Java/BoardG-App/data base/games.txt", true)) {  //tutaj powinien byc domyslny folder przechowywania listy, nie na moim dysku :)
             do {
                 System.out.print("Dodaj gre lub wybierz (.) by zakonczyc: ");
                 wpisGame = dodajGame.readLine();

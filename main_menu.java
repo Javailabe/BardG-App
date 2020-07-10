@@ -1,4 +1,4 @@
-//Poczatkowe menu naszego programu
+//Menu glowne programu BoardG-App
 
 import dataProcessing.input_data;
 import dataProcessing.export_data;
@@ -29,6 +29,7 @@ public class main_menu {
             //koniec programu
             if (mainChoice == '0') {
                 System.out.print("--Konczenie dzialania programu...");
+
             }
 
             //Podglad bazy danych
@@ -48,11 +49,11 @@ public class main_menu {
 
                             }
                             else if (submainChoice == '1') {
-                                System.out.println("Lista gier");
+                                //System.out.println("Lista gier");
                                 //tutaj wywolac liste gier 1z klasy export_data
                             }
                             else if (submainChoice == '2') {
-                                System.out.println("Lista uzytkownikow");
+                                //System.out.println("Lista uzytkownikow");
                                 //tutaj wywolac lise uzytkownikow z wykorzystaniem klasy export_data
 
                                 System.out.println();
@@ -76,12 +77,12 @@ public class main_menu {
                                 //tutaj chce ponownie wywolac menu glowne z maina
 
                             } else if (submainChoice == '1') {
-                                System.out.println("Dodaj gre wg nastepujacego schematu: Nazwa, Wydawca, Rok wydania");
+                                //System.out.println("Dodaj gre wg nastepujacego schematu: Nazwa, Wydawca, Rok wydania");
                                 //tutaj wywolac mozliwosc dodania gry z klasy import_data
 
                             } else if (submainChoice == '2') {
 
-                                input_data.input();
+
                                 //System.out.println("Dodaj uzytkownika wg. nastepujace schematu: Imie, Nazwisko, adres e-mail");
                                 //tutaj wywolac mozliwosc dodania uzytkownika
                             }
