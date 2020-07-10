@@ -26,7 +26,7 @@ public class input_data {
                 fw.write(wpis);
             } while(wpis.compareTo(".") != 0);
         } catch(IOException exc) {
-            System.out.println("Blad wejscia-wyjscia: " + exc)
+            System.out.println("Blad wejscia-wyjscia: " + exc);
         }
 
 
