@@ -81,7 +81,8 @@ public class main_menu {
 
                             } else if (submainChoice == '2') {
 
-                                System.out.println("Dodaj uzytkownika wg. nastepujace schematu: Imie, Nazwisko, adres e-mail");
+                                input_data.input();
+                                //System.out.println("Dodaj uzytkownika wg. nastepujace schematu: Imie, Nazwisko, adres e-mail");
                                 //tutaj wywolac mozliwosc dodania uzytkownika
                             }
             }
