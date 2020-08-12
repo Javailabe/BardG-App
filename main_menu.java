@@ -1,7 +1,7 @@
 //Menu glowne programu BoardG-App
 
-import dataProcessing.input_data;
-import dataProcessing.export_data;
+import dataProcessing.add_game;
+import dataProcessing.add_user;
 
 import java.io.IOException;
 
