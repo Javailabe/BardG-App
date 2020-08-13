@@ -44,7 +44,7 @@ public class Menu {
         private int getInput() {
             Scanner keyboard = new Scanner(System.in);
             int choice = -1;
-            while(choice < 0 || choice > 2) {
+            while(choice < 0 || choice > 4) {
                 try {
                     System.out.print("  Wybieram: ");
                     choice = Integer.parseInt(keyboard.nextLine());
@@ -66,26 +66,22 @@ public class Menu {
                 case 1:
                     AddUser nowyUzytkownik = new AddUser();
                     nowyUzytkownik.dodawanieUzytkownika();
-              /*  case 2:
+                    break;
+                case 2:
                     AddGame nowaGra = new AddGame();
                     nowaGra.inputGame();
+                    break;
                 case 3:
+                    System.out.println();
                     ShowUsers listaUzytkownikow = new ShowUsers();
                     listaUzytkownikow.showUsers();
+                    break;
                 case 4:
+                    System.out.println();
                     ShowGames listaGier = new ShowGames();
-                    listaGier.showGames();*/
-                default:
+                    listaGier.showGames();
+                    break;
+                default: //co tu dac?
             }
-
         }
-
-
-
-
-
-
-
     }
-
-

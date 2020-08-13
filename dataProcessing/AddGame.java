@@ -1,4 +1,3 @@
-/*
 //===========================
 //Dodawanie nowej gry
 //===========================
@@ -14,30 +13,25 @@ public class AddGame {
 
     public void inputGame()
     {
-        String wpisGame;
-        BufferedReader dodajGame = new BufferedReader(new InputStreamReader(System.in));
+        String str;
+        int counter = 0;
 
-        System.out.println("Dodaj gre wedlug ponizszego schematu lub uzyj (.) by zakonczyc: ");
-        System.out.println("Nazwa, Wydawca, Rok wydania");
-        System.out.println();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        try (FileWriter fw = new FileWriter("D:/Java/BoardG-App/data base/games.txt", true)) {  //tutaj powinien byc domyslny folder przechowywania listy, nie na moim dysku :)
+        System.out.println("Dodaj gre wg ponizszego wzoru lub uzyj (.) byz zakonczyc");
+        System.out.println("Nazwa, Wydawca, Rok wydania:\r\n");
+
+        try (FileWriter fw = new FileWriter("D:\\Java\\BardG-App\\data base\\games.txt", true)) {
             do {
-                System.out.print("Dodaj gre lub wybierz (.) by zakonczyc: ");
-                wpisGame = dodajGame.readLine();
-                if (wpisGame.compareTo(".") == 0) break;
+                System.out.print("Nazwa, Wydawca, Rok wydania lub (.): ");
+                str = br.readLine();
+                if(str.compareTo(".") == 0) break;
 
-                wpisGame = wpisGame + "\r\n"; //rozpoczecie nowego wiersza
-                fw.write(wpisGame);
-            } while (wpisGame.compareTo(".") != 0);
-        } catch (IOException exc) {
-            System.out.println("Blad wejscia-wyjscia: " + exc);
+                str = str + "\r\n";  //rozpoczyna nowy wiersz
+                fw.write(str);
+            } while(str.compareTo(".") != 0);
+        } catch( IOException exc) {
+            System.out.println("Blad wejscia-wyjscia");
         }
-
     }
-
-    //tu bedzie chyba potrzebny powrot do glownego menu?
 }
-
-
- */

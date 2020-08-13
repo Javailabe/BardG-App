@@ -1,0 +1,5 @@
+Jan, Kowalski, jan.kowalski@poczta.com
+Piotr, Piotrowski, piotr.piotrowski@poczta.com
+Krzysztof, Kowlaski, k.kowal@poczta.com
+Agnieszka, Pasza, a.pasza@onet.pl
+Krzysztof, Kaper, krzysz.kaper@poczta.com
