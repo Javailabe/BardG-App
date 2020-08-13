@@ -65,8 +65,8 @@ public class Menu {
                     break;
                 case 1:
                     AddUser nowyUzytkownik = new AddUser();
-                    nowyUzytkownik.inputUser();
-                case 2:
+                    nowyUzytkownik.dodawanieUzytkownika();
+              /*  case 2:
                     AddGame nowaGra = new AddGame();
                     nowaGra.inputGame();
                 case 3:
@@ -74,7 +74,7 @@ public class Menu {
                     listaUzytkownikow.showUsers();
                 case 4:
                     ShowGames listaGier = new ShowGames();
-                    listaGier.showGames();
+                    listaGier.showGames();*/
                 default:
             }
 

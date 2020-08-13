@@ -5,9 +5,36 @@
 package dataProcessing;
 
 import java.io.*;
+import java.util.Scanner;
 
 public class AddUser {
 
+       public void dodawanieUzytkownika() {
+
+        System.out.println("Dodaj uzytkownika wedlug ponizszego schematu lub uzyj (.) by zakonczyc: ");
+        System.out.println("Imie, Nazwisko, email");
+        Scanner sc = new Scanner(System.in);
+        String text = sc.nextLine();
+
+        File users = new File("D:\\Java\\BardG-App\\data base\\users.txt");
+           try{
+               BufferedWriter bw = new BufferedWriter(new FileWriter(users));
+               bw.write(text);
+               bw.newLine();
+           }
+           catch (IOException exc) {
+               exc.printStackTrace();
+           }
+
+    }
+
+}
+
+
+
+
+
+    /*
     public static void inputUser() {
 
         String uzytkownik;

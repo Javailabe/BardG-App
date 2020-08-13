@@ -1,3 +1,4 @@
+/*
 //===========================
 //Dodawanie nowej gry
 //===========================
@@ -37,3 +38,6 @@ public class AddGame {
 
     //tu bedzie chyba potrzebny powrot do glownego menu?
 }
+
+
+ */
