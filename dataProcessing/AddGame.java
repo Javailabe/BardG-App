@@ -9,9 +9,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class add_game {
+public class AddGame {
 
-    void inputGame()
+    public void inputGame()
     {
         String wpisGame;
         BufferedReader dodajGame = new BufferedReader(new InputStreamReader(System.in));

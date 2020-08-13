@@ -4,5 +4,8 @@
 
 package dataProcessing;
 
-public class show_users {
+public class ShowUsers {
+    public void showUsers() {
+
+    }
 }

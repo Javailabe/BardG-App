@@ -4,14 +4,39 @@
 
 package dataProcessing;
 
-import java.io.BufferedReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
-public class add_user {
+public class AddUser {
 
-    void inputUser() {
+    public static void inputUser() {
+
+        String uzytkownik;
+        BufferedReader dodajUzytkownika = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("Dodaj uzytkownika wedlug ponizszego schematu lub uzyj (.) by zakonczyc: ");
+        System.out.println("Imie, Nazwisko, email");
+
+        try {
+            FileWriter fw = new FileWriter("D:/Java/BoardG-App/data base/users.txt", true);
+            do {
+                System.out.print("Imie, Nazwisko, email lub (.): ");
+                uzytkownik = dodajUzytkownika.readLine();
+                if (uzytkownik.compareTo(".") == 0) break;
+
+                uzytkownik = uzytkownik + "\r\n"; //rozpoczecie nowego wiersza
+                fw.write(uzytkownik);
+            } while (uzytkownik.compareTo(".") != 0);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+}
+
+
+
+
+        /*
         String wpisUser;
         BufferedReader dodajUser = new BufferedReader(new InputStreamReader(System.in));
 
@@ -36,3 +61,5 @@ public class add_user {
 
     }
 }
+
+         */

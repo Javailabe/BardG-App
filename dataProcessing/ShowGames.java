@@ -4,6 +4,11 @@
 
 package dataProcessing;
 
-public class show_games {
+public class ShowGames {
+    public void showGames() {
+
+    }
+
+
 
 }

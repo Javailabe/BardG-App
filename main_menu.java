@@ -1,7 +1,9 @@
+/*
+
 //Menu glowne programu BoardG-App
 
-import dataProcessing.add_game;
-import dataProcessing.add_user;
+import dataProcessing.AddGame;
+import dataProcessing.AddUser;
 
 import java.io.IOException;
 
@@ -9,11 +11,21 @@ import java.io.IOException;
 public class main_menu {
     public static void main(String args[]) throws IOException {
 
+
+
+
+
+
+
+
         int mainChoice, submainChoice;
 
         //menu glowne
-        System.out.println();
-        System.out.println("Witaj w programie BoardG-App!");
+        System.out.println("+----------------------------------------------------------+");
+        System.out.println("|                                                          |");
+        System.out.println("|           Witaj w programie BoardG-App!                  |");
+        System.out.println("|                                                          |");
+        System.out.println("+----------------------------------------------------------+");
         System.out.println();
         System.out.println("Wybierz jedna z ponizszych opcji aby wykonac rzadana operacje a nastepnie nacisnij ENTER:");
         System.out.println();
@@ -95,3 +107,4 @@ public class main_menu {
 
     }
 
+*/
