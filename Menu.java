@@ -38,6 +38,7 @@ public class Menu {
             System.out.println("        Wybierz (2) - Dodaj gre");
             System.out.println("        Wybierz (3) - Pokaz liste uzytkownikow");
             System.out.println("        Wybierz (4) - Pokaz liste gier");
+            System.out.println("        Wybierz (5) - Usun wpis");
             System.out.println("        Wybierz (0) - Zakoncz program");
             System.out.println();
         }
