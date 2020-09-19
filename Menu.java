@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import dataProcessing.*;
 
+import javax.xml.stream.events.Characters;
+
 public class Menu {
 
     boolean exit;
@@ -38,14 +40,15 @@ public class Menu {
             System.out.println("        Wybierz (2) - Dodaj gre");
             System.out.println("        Wybierz (3) - Pokaz liste uzytkownikow");
             System.out.println("        Wybierz (4) - Pokaz liste gier");
-            System.out.println("        Wybierz (5) - Usun wpis");
+            System.out.println("        Wybierz (5) - Usun gre");
+            System.out.println("        Wybierz (6) - Usun uzytkownika");
             System.out.println("        Wybierz (0) - Zakoncz program");
             System.out.println();
         }
         private int getInput() {
             Scanner keyboard = new Scanner(System.in);
             int choice = -1;
-            while(choice < 0 || choice > 4) {
+            while(choice < 0 || choice > 6) {
                 try {
                     System.out.print("  Wybieram: ");
                     choice = Integer.parseInt(keyboard.nextLine());
@@ -77,7 +80,10 @@ public class Menu {
                     DBprocessing.showGames();
                     break;
                 case 5:
-                    //usuwanie wpisow
+                   DBprocessing.deleteGame();
+                   break;
+                case 6:
+                    DBprocessing.deleteUser();
 
                 default: //co tu dac?
             }

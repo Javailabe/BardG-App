@@ -17,7 +17,7 @@ public class DBprocessing {
             System.out.println();
 
             while (gamelist.next())
-                System.out.println(gamelist.getInt(1)+ " " + gamelist.getString(2) + " "
+                System.out.println(gamelist.getInt(1) + " " + gamelist.getString(2) + " "
                         + gamelist.getString(3) + "/" + gamelist.getString(4));
 
             System.out.println();
@@ -26,7 +26,8 @@ public class DBprocessing {
             con.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-        };
+        }
+        ;
     }
 
     public static void showUsers() {
@@ -50,7 +51,8 @@ public class DBprocessing {
             con.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-        };
+        }
+        ;
     }
 
     public static void addGame() {
@@ -111,11 +113,10 @@ public class DBprocessing {
         }
     }
 
-   public static void addUser() {
+    public static void addUser() {
 
         int user_ID;
-        String subName, Name, subSurname, Surname, subemail, email ,addUser;
-
+        String subName, Name, subSurname, Surname, subemail, email, addUser;
 
 
         try {
@@ -173,5 +174,85 @@ public class DBprocessing {
             throwables.printStackTrace();
         }
 
+    }
+
+    public static void deleteGame() {
+
+        int game_ID;
+        String delgame;
+
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/Hrx91CNzZS", "Hrx91CNzZS", "4x4xuOk7aj");
+
+            //Wylistowanie gier w celu identyfikacji poprawnego ID
+
+            Statement stmtShow = con.createStatement();
+            ResultSet gamelist = stmtShow.executeQuery("SELECT * FROM BoardG_games");
+
+            System.out.println("game_ID, Name, Available in shop / Total in shop");
+            System.out.println();
+
+            while (gamelist.next())
+                System.out.println(gamelist.getInt(1) + " " + gamelist.getString(2) + " "
+                        + gamelist.getString(3) + "/" + gamelist.getString(4));
+
+            System.out.println();
+            System.out.println("---------Koniec listy gier----------");
+            System.out.println();
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("By usunac linie podaj jej ID: ");
+            game_ID = scanner.nextInt();
+
+            //funkcja usuwania wpisu w mysql
+            Statement stmtAdd = con.createStatement();
+            delgame = "DELETE FROM BoardG_games WHERE game_ID = " + game_ID;
+
+            PreparedStatement preparedStmt = con.prepareStatement(delgame);
+            preparedStmt.execute();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
+    public static void deleteUser() {
+
+        int user_ID;
+        String deluser;
+
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/Hrx91CNzZS", "Hrx91CNzZS", "4x4xuOk7aj");
+
+            //Wylistowanie uzytkownikow w celu identyfikacji poprawnego ID
+
+            Statement stmtShow = con.createStatement();
+            ResultSet userslist = stmtShow.executeQuery("SELECT * FROM BoardG_users");
+
+            System.out.println("user_ID, Name, Surname, e-mail");
+            System.out.println();
+
+            while (userslist.next())
+                System.out.println(userslist.getInt(1) + " " + userslist.getString(2) + " "
+                        + userslist.getString(3) + " " + userslist.getString(4));
+
+            System.out.println();
+            System.out.println("---------Koniec listy uzytkownikow----------");
+            System.out.println();
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("By usunac linie podaj jej ID: ");
+            user_ID = scanner.nextInt();
+
+            //funkcja usuwania wpisu w mysql
+            Statement stmtAdd = con.createStatement();
+            deluser = "DELETE FROM BoardG_users WHERE game_ID = " + user_ID;
+
+            PreparedStatement preparedStmt = con.prepareStatement(deluser);
+            preparedStmt.execute();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }
