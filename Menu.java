@@ -65,23 +65,20 @@ public class Menu {
                     System.out.println();
                     break;
                 case 1:
-                    AddUser nowyUzytkownik = new AddUser();
-                    nowyUzytkownik.dodawanieUzytkownika();
+                    DBprocessing.addUser();
                     break;
                 case 2:
-                    AddGame nowaGra = new AddGame();
-                    nowaGra.inputGame();
+                    DBprocessing.addGame();
                     break;
                 case 3:
-                    System.out.println();
-                    ShowUsers listaUzytkownikow = new ShowUsers();
-                    listaUzytkownikow.showUsers();
+                    DBprocessing.showUsers();
                     break;
                 case 4:
-                    System.out.println();
-                    ShowGames listaGier = new ShowGames();
-                    listaGier.showGames();
+                    DBprocessing.showGames();
                     break;
+                case 5:
+                    //usuwanie wpisow
+
                 default: //co tu dac?
             }
         }
